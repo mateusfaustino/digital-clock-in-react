@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import DigitalClock from '../Components/Clock'
+import Navbar from '../Components/Header/index'
+
 
 const Page = styled.div`
     height:100vh;
@@ -10,10 +12,17 @@ const Page = styled.div`
     justify-content:center;
     background:#10101E;
 `
+const Title = styled.h1`
+color:#fff;
+padding-bottom:32px;
+`
+
 export default function Clock() {
     return (
         <Page>
-            <DigitalClock></DigitalClock>
+            <Navbar/>   
+            <Title>Digital Clock</Title>
+            <DigitalClock/>
         </Page>
     )
 }

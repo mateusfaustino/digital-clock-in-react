@@ -9,13 +9,15 @@ const DateTime = styled.div`
     flex-direction:column;
     color: #fff;
     font-family: "Segoe UI", sans-serif;
-    width:340px;
+    width:100%;
+    max-width:340px;
     padding:15px 10px;
     border:3px solid #2E94E3;
     border-radius:5px;
     -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255,255,255,0.1));
     transition:0.5s;
     transition-property:background, box-shadow ;
+    background:rgba(0,0,0, 0.4);
     &:hover{
         background:#2E94E3;
         box-shadow: 0 0 30px #2E94E3;
@@ -23,7 +25,9 @@ const DateTime = styled.div`
     .zero:before{
         content:"0";
     }
-    
+    @media(max-width: 400px) {
+        max-width:80vw;
+    }
     `; 
     const MyDate = styled.div`
         font-size:20px;
@@ -40,9 +44,11 @@ const DateTime = styled.div`
                 }
             }
         }
+    @media(max-width: 400px) {
+        font-size:14px;
+    }
     `; 
     const Time = styled.div`
-    
         display:flex;
         align-items:center;
         justify-content:center;    
@@ -54,13 +60,21 @@ const DateTime = styled.div`
             text-align:center;
             
             &:not(:last-child){
-                margin-right: ${props => props.blink==":"? "0":"17px"};
+                margin-right: ${props => props.blink===":"? "0":"17px"};
                 &:after{
                     content:"${props => props.blink}";
+                     
                 }
             }
         }
-        
+        @media(max-width: 400px) {
+            font-size:50px;
+            span{
+                &:not(:last-child){
+                    margin-right: ${props => props.blink===":"? "0":"15px"};
+                }
+            }
+        }
         
     `; 
 export default function DigitalClock() {
