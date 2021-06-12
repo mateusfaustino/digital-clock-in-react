@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
 
 
 const Ul = styled.ul`
@@ -74,10 +73,10 @@ const Menu = (props) => {
     
  return(
     <Ul  active={props.isActive? true: false} >
-            <li onClick={props.setIsActive}><a  href='https://github.com/mateusfaustino/digital-clock-in-react' >Código Fonte</a></li>
-            <li onClick={props.setIsActive}><a  href='https://github.com/mateusfaustino/' >Github</a></li>
-            <li onClick={props.setIsActive}><a  href='https://www.linkedin.com/in/mateus-faustino-021967172/' >Linkedin</a></li>
-            <li onClick={props.setIsActive}><a  href='mailto:mateusfaustino2017@gmail.com' >Email</a></li>
+            <li onClick={props.setIsActive}><a  target="_blank" rel="noreferrer"  href='https://github.com/mateusfaustino/digital-clock-in-react' >Código Fonte</a></li>
+            <li onClick={props.setIsActive}><a  target="_blank" rel="noreferrer"  href='https://github.com/mateusfaustino/' >Github</a></li>
+            <li onClick={props.setIsActive}><a  target="_blank" rel="noreferrer"  href='https://www.linkedin.com/in/mateus-faustino-021967172/' >Linkedin</a></li>
+            <li onClick={props.setIsActive}><a  target="_blank" rel="noreferrer"  href='mailto:mateusfaustino2017@gmail.com' >Email</a></li>
     </Ul>
 )
     

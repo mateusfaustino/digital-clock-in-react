@@ -25,10 +25,10 @@ const Nav= styled.div`
         width: auto;
         
         &.nav__close{
-            display:${props => props.icon=='close' ? 'block' : 'none' } ;
+            display:${props => props.icon==='close' ? 'block' : 'none' } ;
         }
         &.nav__bars{
-            display:${props => props.icon=='open' ? 'block' : 'none' } ;
+            display:${props => props.icon==='open' ? 'block' : 'none' } ;
         }
         &:hover{
             cursor: pointer;
