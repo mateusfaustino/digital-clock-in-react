@@ -21,16 +21,20 @@ const Ul = styled.ul`
     transition: 1s;
 
     li{
+        width:100%;
+        padding: 16px 0;
         list-style:none;
         &:not(:last-child){
             border-bottom: 1px solid #fff;
         }
+
         a{
             display: flex;
             color: #fff;
             font-family: sans-serif;
-            font-weight: 700;
             text-decoration:none;
+            font-size:16px;
+            font-weight: 200;
         }
         
     }
@@ -44,8 +48,16 @@ const Ul = styled.ul`
             position:initial;
             width: auto;
             transform: none;
-        li{
-            border-bottom: none;
+            padding: 0;
+            height: 100%;
+            border-top:none;
+            li{
+                width:auto;
+                list-style:none;
+                padding:0;
+                &:not(:last-child){
+                    border-bottom: none;
+                }
             a{
                 display: flex;
                 color: #fff;
@@ -65,6 +77,7 @@ const Menu = (props) => {
             <li onClick={props.setIsActive}><Link  to='/about' >Código Fonte</Link></li>
             <li onClick={props.setIsActive}><Link  to='/contact' >Github</Link></li>
             <li onClick={props.setIsActive}><Link  to='/buy' >Linkedin</Link></li>
+            <li onClick={props.setIsActive}><Link  to='/buy' >Email</Link></li>
     </Ul>
 )
     
