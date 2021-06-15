@@ -60,20 +60,16 @@ const DateTime = styled.div`
             text-align:center;
             
             &:not(:last-child){
-                margin-right: ${props => props.blink===":"? "0":"17px"};
                 &:after{
-                    content:"${props => props.blink}";
-                     
+                    content:":";
+                    color: ${props => props.blink===":"? "#fff":"transparent"};
+                    
                 }
             }
         }
         @media(max-width: 400px) {
             font-size:50px;
-            span{
-                &:not(:last-child){
-                    margin-right: ${props => props.blink===":"? "0":"15px"};
-                }
-            }
+            
         }
         
     `; 
